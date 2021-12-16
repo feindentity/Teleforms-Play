@@ -22,7 +22,9 @@ steps:
   displayName: 'Run a one-line script'
 
 - script: dotnet --list-sdks
-  displayName: 'Run a one-line script'
+  displayName: 'check for sdks'
+- script: ls -la
+  displayName: 'List Docs'
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
