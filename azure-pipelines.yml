@@ -32,7 +32,7 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'test'
-    projects: '/tests/tfmtools.test/'
+    projects: '/tests/tfmtools.test/tfmtools.test.csproj'
     testRunTitle: 'AutoTest'
     arguments: --roll-forward LatestMajor
 
