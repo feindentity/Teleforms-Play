@@ -1,8 +1,5 @@
 # Starter pipeline
-- task: UseDotNet@2
-  inputs:
-    packageType: 'sdk'
-    version: '6.X'
+
 # Start with a minimal pipeline that you can customize to build and deploy your code.
 # Add steps that build, run tests, deploy, and more:
 # https://aka.ms/yaml
@@ -14,6 +11,11 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
+- task: UseDotNet@2
+  inputs:
+    packageType: 'sdk'
+    version: '6.X'
+
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
