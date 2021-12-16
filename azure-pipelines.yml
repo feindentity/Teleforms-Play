@@ -14,8 +14,12 @@ steps:
 - task: UseDotNet@2
   inputs:
     packageType: 'sdk'
-    version: '6.X'
-
+    version: '6.x'
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'build'
+    projects: '/Teleforms-Play/libraries/tfmtools/'
+    
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
