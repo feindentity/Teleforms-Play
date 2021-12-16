@@ -21,8 +21,8 @@ steps:
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
-- script: dotnet --list-sdks
-  displayName: 'check for sdks'
+- script: dotnet --list-runtimes
+  displayName: 'check for runtimes'
 - script: ls -la
   displayName: 'List Docs'
 - script: |
@@ -34,3 +34,5 @@ steps:
     command: 'test'
     projects: '/tests/tfmtools.test/'
     testRunTitle: 'AutoTest'
+    arguments: --roll-forward LatestMajor
+
