@@ -16,14 +16,13 @@ steps:
     packageType: 'sdk'
     version: '6.0.x'
     performMultiLevelLookup: true
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'build'
-    projects: '/Teleforms-Play/libraries/tfmtools/'
+
     
 - script: echo Hello, world!
   displayName: 'Run a one-line script'
 
+- script: dotnet --list-sdks
+  displayName: 'Run a one-line script'
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
